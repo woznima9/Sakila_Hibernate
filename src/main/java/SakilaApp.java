@@ -1,4 +1,5 @@
 import mw.sda.entities.CategoryEntity;
+import mw.sda.entities.Film;
 import mw.sda.hibernate.HibernateHelper;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -24,6 +25,18 @@ public class SakilaApp {
         for (Object o : query.list()) {
             System.out.println("  " + o);
         }
+        short liczba2 = 2;
+        Film film = session.get(Film.class, liczba2);
+        System.out.println(film);
+        entityName = "Film";
+        query = session.createQuery("from Film");
+        System.out.println("executing: " + query.getQueryString());
+        for (Object o : query.list()) {
+            System.out.println("  " + o);
+            System.out.println("Liczba2: "+liczba2++ );
+        }
+
+
         System.out.println("zamykanie sesji");
         session.close();
         HibernateHelper.closeSessionFactory();

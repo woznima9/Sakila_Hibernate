@@ -13,6 +13,7 @@
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
         <mapping class="mw.sda.entities.CategoryEntity"/>
+        <mapping class="mw.sda.entities.Film"/>
 
     </session-factory>
 </hibernate-configuration>
