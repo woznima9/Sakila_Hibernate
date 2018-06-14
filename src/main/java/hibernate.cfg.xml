@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/sakila?serverTimezone=UTC&amp;useSSL=false</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">woznima9</property>
+        <property name="connection.password">Mwmwzz1!</property>
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+        <mapping class="mw.sda.entities.CategoryEntity"/>
+
+    </session-factory>
+</hibernate-configuration>
